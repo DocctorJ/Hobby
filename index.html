@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Hobby Site</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <h2 class="logo">🌟 My Site</h2>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+          <li>
+            <a href="#" onclick="toggleTheme()" class="nav-link"
+              >🌙 Dark Mode</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <h1 id="mainTitle">EXPERIENCE NATURE</h1>
+      <p class="tagline">Welcome! This is my passion project.</p>
+    </header>
+
+    <main class="container">
+      <!-- Card 1 -->
+      <div class="card">
+        <h2>Why I Love This</h2>
+        <img src="img1.jpg" alt="Hobby Image 1" class="card-img" />
+        <p id="reason-text">
+          Nature is freshing and beautiful. I feel at peace when I reflect on how amazing and magnificent the Creator of nature is.
+        </p>
+        <button onclick="showSurprise()" class="btn btn-primary">
+          ✨ Click for a Surprise
+        </button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <h2>My Favorite Memory</h2>
+        <img src="img2.jpg" alt="Hobby Image 2" class="card-img" />
+        <p>
+          When I was a boy, my father and I would regularly take a short trip to the country on the weekend. 
+          This was a routine for us because it helped us away from the noisy and busy city live. 
+          We would walk into the woods, surrounded by tall green trees, with thier leaves covered in dew. 
+          The birds chirping high up in the trees, creating a well ochestrated symphony. The sunrays beaming down through the leaves 
+          and branches. We would pluck fresh and ripe fruits while walking down the pathway that winds through the evergreen trees. Once in a while, we would 
+          a wild squirrel foraging for seeds and nuts.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <h2>Fun Facts</h2>
+        <img src="img3.jpg" alt="Hobby Image 3" class="card-img" />
+        <div id="facts-list">
+          <p>• For every 1000 meter you clumb a mountain, the temperature drops about 6.5 * C.</p>
+          <p>• Mountian ranges cover about 22% of earth's land suraface.</p>
+          <p>• To be called a mountain, the land feature must be over 600 meters tall.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <h2>Gallery</h2>
+        <img src="img4.jpg" alt="Hobby Image 4" class="card-img" />
+        <p>
+          This is another section you can use to showcase more content about
+          your hobby.
+        </p>
+      </div>
+
+      <!-- Interactive Counter -->
+      <div class="card highlight">
+        <h2>Visitor Counter</h2>
+        <p>You are visitor number: <span id="visitorCount">1</span></p>
+        <button onclick="incrementCounter()" class="btn btn-success">
+          Add to Counter
+        </button>
+      </div>
+    </main> 
+
+  
+<!-- Image Gallery -->
+<div class="card">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img
+      src="img1.jpg"
+      alt="Gallery 1"
+      class="gallery-img"
+      onclick="openGalleryModal(this)"
+    />
+    <img
+      src="img2.jpg"
+      alt="Gallery 2"
+      class="gallery-img"
+      onclick="openGalleryModal(this)"
+    />
+    <img
+      src="img3.jpg"
+      alt="Gallery 3"
+      class="gallery-img"
+      onclick="openGalleryModal(this)"
+    />
+    <img
+      src="img4.jpg"
+      alt="Gallery 4"
+      class="gallery-img"
+      onclick="openGalleryModal(this)"
+    />
+  </div>
+</div>
+
+<!-- Image Modal (Lightbox) -->
+<div id="galleryModal" class="modal" onclick="closeGalleryModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage" />
+</div>
+<!-- Fun Quiz -->
+<div class="card highlight">
+  <h2>Quick Quiz!</h2>
+  <div id="quiz">
+    <p>
+      <strong>Question:</strong> What is your favorite thing about this hobby?
+    </p>
+    <div class="quiz-options">
+      <button onclick="recordAnswer('Fun')" class="btn btn-secondary">
+        🎉 It's Fun
+      </button>
+      <button onclick="recordAnswer('Relaxing')" class="btn btn-secondary">
+        😌 It's Relaxing
+      </button>
+      <button onclick="recordAnswer('Creative')" class="btn btn-secondary">
+        🎨 It's Creative
+      </button>
+      <button onclick="recordAnswer('Social')" class="btn btn-secondary">
+        👥 Social Time
+      </button>
+    </div>
+    <p id="quizResult" style="margin-top: 20px; font-size: 1.2rem;"></p>
+  </div>
+</div>
+
+    <footer>
+      <p>&copy; 2026 Created by [JENOM] | Last Updated: January 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
